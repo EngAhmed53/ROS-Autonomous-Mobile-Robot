@@ -1,0 +1,8 @@
+<!-- Launch rviz with a saved config file -->
+<launch>
+ <node
+    name="rviz"
+    pkg="rviz"
+    type="rviz"
+    args="-d $(find my_robot)/rviz/real_robot_rviz.rviz" />
+</launch>
