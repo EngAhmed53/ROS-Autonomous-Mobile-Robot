@@ -14,7 +14,7 @@
 This project is based on the Udacity Home Service Robot project; this project is the final project of the Udacity Robotics Nanodegree.
 
 ## Demo
-[Robot demo](https://youtu.be/6-blbdkCTCw?si=ebP5qN-LpaIK6vIa).
+[Youtube video](https://youtu.be/6-blbdkCTCw?si=ebP5qN-LpaIK6vIa).
 
 ## Motivations
 I start working on this project for several reasons:
@@ -50,8 +50,8 @@ The robot has three sensors:
 3. Camera
 
 <p align="center" width="100%">
-    <img src="images/robot.jpg" alt="Home Service Robot" width="500">
-    <br>Home Service Robot Demo
+    <img src="images/robot.jpg" alt="Robot" width="500">
+    <br>Robot Design
 </p>
 
 ## Source Code
