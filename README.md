@@ -14,7 +14,7 @@
 This project is based on the Udacity Home Service Robot project; this project is the final project of the Udacity Robotics Nanodegree.
 
 ## Demo
-[Youtube video](https://youtu.be/6-blbdkCTCw?si=ebP5qN-LpaIK6vIa).
+[Youtube video](https://youtu.be/6-blbdkCTCw?si=ebP5qN-LpaIK6vIa)
 
 ## Motivations
 I start working on this project for several reasons:
