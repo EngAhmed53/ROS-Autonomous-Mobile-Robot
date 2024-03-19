@@ -55,7 +55,7 @@ The robot has three sensors:
 </p>
 
 <p align="center" width="100%">
-    <img src="images/urdf.jpg" alt="Robot" width="500">
+    <img src="images/urdf.JPG" alt="Robot" width="500">
     <br>Robot URDF
 </p>
 
