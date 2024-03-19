@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot name="my_robot">
+
+  <link name="robot_footprint"></link>
+  <joint name="robot_footprint_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 -1.57" />
+    <parent link="robot_footprint"/>
+    <child link="base_link" />
+  </joint>
+
+  <link name="base_link">
+    <inertial>
+      <origin xyz="0 0.00086857 -0.052452" rpy="0 0 0" />
+      <mass value="4.8015" />
+      <inertia ixx="0.031989" ixy="-1.3236E-18" ixz="-6.8277E-21" iyy="0.017464" iyz="0.00037688" izz="0.039875" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://my_robot/meshes/base_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://my_robot/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="camera_link">
+    <visual>
+      <geometry>
+        <box size="0.03 0.01 0.03"/>
+      </geometry>
+      <material name="red"/>
+    </visual>
+  </link>
+
+
+  <joint name="camera_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="camera_link"/>
+    <origin xyz="0.0 0.12486 0.015" rpy="0 0 0"/>
+  </joint>
+
+  <link name="raspicam"></link>
+
+  <joint name="camera_optical_joint" type="fixed">
+    <parent link="camera_link"/>
+    <child link="raspicam"/>
+    <origin xyz="0 0 0" rpy="0 -1.57 0"/>
+  </joint>
+
+
+  <link name="laser">
+    <inertial>
+      <origin xyz="9.8765E-13 -7.5229E-13 -0.0275" rpy="0 0 0" />
+      <mass value="0.21166" />
+      <inertia ixx="0.00011818" ixy="1.6676E-21" ixz="-2.1229E-36" iyy="0.00011818" iyz="-3.1058E-21" izz="0.00012964" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://my_robot/meshes/laser_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://my_robot/meshes/laser_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="laser_joint" type="fixed">
+    <origin xyz="0 0.010725 0.046" rpy="0 0 1.571" />
+    <parent link="base_link" />
+    <child link="laser" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <link name="left_wheel">
+    <inertial>
+      <origin xyz="0.01304 0 0" rpy="0 0 0" />
+      <mass value="0.086502" />
+      <inertia ixx="4.5566E-05" ixy="7.1534E-20" ixz="7.1695E-20" iyy="2.7696E-05" iyz="2.1146E-34" izz="2.7696E-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://my_robot/meshes/left_wheel.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://my_robot/meshes/left_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_wheel_joint" type="continuous">
+    <origin xyz="-0.1205 -0.051915 -0.118" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="left_wheel" />
+    <axis xyz="1 0 0" />
+    <limit effort="0" velocity="2" />
+  </joint>
+  <link name="right_wheel">
+    <inertial>
+      <origin xyz="-0.01304 -4.4409E-16 2.2204E-16" rpy="0 0 0" />
+      <mass value="0.086502" />
+      <inertia ixx="4.5566E-05" ixy="1.7026E-19" ixz="-7.1695E-20" iyy="2.7696E-05" iyz="-7.8374E-34" izz="2.7696E-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://my_robot/meshes/right_wheel.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://my_robot/meshes/right_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_wheel_joint" type="continuous">
+    <origin xyz="0.1205 -0.051915 -0.118" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="right_wheel" />
+    <axis xyz="1 0 0" />
+    <limit effort="0" velocity="2" />
+  </joint>
+</robot>
