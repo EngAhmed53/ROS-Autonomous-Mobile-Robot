@@ -51,7 +51,12 @@ The robot has three sensors:
 
 <p align="center" width="100%">
     <img src="images/robot.jpg" alt="Robot" width="500">
-    <br>Robot Design
+    <br>Robot Chassis
+</p>
+
+<p align="center" width="100%">
+    <img src="images/robot.jpg" alt="Robot" width="500">
+    <br>Robot URDF
 </p>
 
 ## Source Code
